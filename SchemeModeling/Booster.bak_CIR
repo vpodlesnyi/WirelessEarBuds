@@ -7,8 +7,8 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=11.0.1.9
 Key ID=0
-NLCnt=54
-TXCnt=0
+NLCnt=49
+TXCnt=2
 
 [shapedef]
 Name=Battery
@@ -271,7 +271,8 @@ NodeVoltageFormat=3
 PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
-Window Placement in Transient Probe=0,1, -1,-1, -8,-30, 638,0,1591,698
+Window Placement in Transient Analysis=2,3, -1,-1, -8,-30, 0,0,1171,488
+Window Placement in Transient Probe=0,1, -1,-1, -8,-30, 709,0,1843,838
 SpiceType=AMBIGUOUS
 Title_Block_Border=Mult
 Title_Block=False
@@ -349,7 +350,7 @@ Pxs=352,432,352,440
 
 [Comp]
 Name=Diode
-Px=656,312
+Px=592,312
 Rot=6
 
 [Attr]
@@ -368,7 +369,7 @@ V=DO-214AC
 
 [Comp]
 Name=Capacitor
-Px=768,384
+Px=696,384
 Rot=3
 
 [Attr]
@@ -378,7 +379,7 @@ Style=8192
 
 [Attr]
 ON=-44,-40,CAPACITANCE
-V=1500u
+V=660u
 Style=8192
 
 [Attr]
@@ -391,7 +392,7 @@ V
 
 [Comp]
 Name=Resistor
-Px=832,336
+Px=760,336
 Rot=1
 
 [Attr]
@@ -409,41 +410,41 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=656,312,696,312
+Pxs=592,312,624,312
 
 [Wire]
-Pxs=832,312,832,336
-
-[Wire]
-Pxs=768,312,768,336
-
-[Wire]
-Pxs=768,312,832,312
+Pxs=760,312,760,336
 
 [Wire]
 Pxs=696,312,696,336
 
 [Wire]
-Pxs=696,312,768,312
+Pxs=696,312,760,312
 
 [Wire]
-Pxs=832,384,832,408
+Pxs=624,312,624,336
+
+[Wire]
+Pxs=624,312,672,312
+
+[Wire]
+Pxs=760,384,760,408
+
+[Wire]
+Pxs=624,384,624,408
+
+[Wire]
+Pxs=624,408,696,408
 
 [Wire]
 Pxs=696,384,696,408
 
 [Wire]
-Pxs=696,408,768,408
-
-[Wire]
-Pxs=768,384,768,408
-
-[Wire]
-Pxs=768,408,832,408
+Pxs=696,408,760,408
 
 [Comp]
 Name=Diode_Schottky
-Px=696,336
+Px=624,336
 Rot=1
 
 [Attr]
@@ -471,8 +472,8 @@ V=L1
 Style=8192
 
 [Attr]
-ON=12,-36,INDUCTANCE
-V=600u
+ON=10,-31,INDUCTANCE
+V=680u
 Style=8192
 
 [Attr]
@@ -480,7 +481,7 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=592,312,608,312
+Pxs=528,312,544,312
 
 [Comp]
 Name=DNMOS
@@ -515,7 +516,8 @@ Style=8192
 
 [Attr]
 ON=-26,-41,VALUE
-V=12
+V=4
+Style=8192
 
 [Attr]
 ON=0,0,PACKAGE
@@ -523,7 +525,7 @@ V
 
 [Comp]
 Name=Ground
-Px=696,440
+Px=624,440
 Rot=1
 
 [Wire]
@@ -568,7 +570,7 @@ Style=8192
 
 [Attr]
 ON=-36,-40,CAPACITANCE
-V=10n
+V=1n
 Style=8192
 
 [Attr]
@@ -610,7 +612,7 @@ Pxs=424,200,528,200
 Pxs=472,256,472,264
 
 [Wire]
-Pxs=472,312,528,312
+Pxs=472,312,488,312
 
 [Wire]
 Pxs=528,200,528,232
@@ -618,67 +620,36 @@ Pxs=528,200,528,232
 [Wire]
 Pxs=352,200,424,200
 
-[Comp]
-Name=Capacitor
-Px=608,256
-Rot=4
-
-[Attr]
-ON=17,-46,PART
-V=C3
-Style=8192
-
-[Attr]
-ON=11,-31,CAPACITANCE
-V=10n
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=592,256,608,256
-
-[Wire]
-Pxs=592,256,592,312
-
-[Comp]
-Name=Resistor
-Px=696,264
-Rot=1
-
-[Attr]
-ON=10,10,PART
-V=R5
-Style=8192
-
-[Attr]
-ON=10,24,RESISTANCE
-V=1k
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=656,256,696,256
-
-[Wire]
-Pxs=696,256,696,264
-
 [Wire]
 Pxs=424,256,424,264
-
-[Wire]
-Pxs=528,312,592,312
 
 [Wire]
 Pxs=424,256,472,256
 
 [Wire]
-Pxs=696,408,696,440
+Pxs=624,408,624,440
+
+[Wire]
+Pxs=672,312,696,312
+
+[Wire]
+Pxs=488,312,528,312
+
+[Grid Text]
+Text="Before"
+Px=488,312
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Out"
+Px=672,312
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
 
 [Schematic]
 CurrentSection 0=0
@@ -688,7 +659,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=0.66666666666666663
+Scale=0.25
 GridType=Normal
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main2","Electrolytic","GroundArrow","DeMorgan"
@@ -835,8 +806,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-Scale 3=0.66666666666666663
-Px=638,139
+SB 3=517,175
+Scale 3=0.25
+Px=664,226
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -897,7 +869,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
-SB 0=0,75
+SB 0=69,75
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -1004,7 +976,7 @@ Text=.MODEL SF22 D (BV=100 CJO=74.7141p IS=100p M=435.104m N=1.14009 RL=1.03045G
 Text=+ RS=79.2676m TT=86.3206n VJ=700.007m)
 Text=*** From file D:\MICROCAP11\MC11\library\UTILITY.LBR
 Text=*** 5V Pulse Source
-Text=.MODEL PULSE PUL (P1=0 P2=10n P3=60000n P4=60010n P5=100000n VONE=15)
+Text=.MODEL PULSE PUL (P1=0 P2=10n P3=65000n P4=65010n P5=100000n VONE=15)
 
 [InfoPage]
 InfoPage=True
@@ -1020,13 +992,14 @@ ComponentCounts=True
 
 [Transient]
 WinID=1
+Window Placement=2,3, -1,-1, -8,-30, 0,0,1171,488
 Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
 Select Box Color=#000080
-Window Placement in Probe=0,1, -1,-1, 0,0, 0,0,647,698
-Title
+Window Placement in Probe=0,1, -1,-1, 0,0, 0,0,710,834
+Title=Booster.CIR
 AutoTitle=Yes
 Grid Color=#808080
 Grid Weight=1
@@ -1048,7 +1021,7 @@ Ruler=False
 XAxisGrids=True
 YAxisGrids=True
 MinorLogGrids=True
-BaseLine=False
+BaseLine=True
 AlignZ=True
 Align Cursors=True
 TagFormatX=3
@@ -1060,7 +1033,7 @@ Tracker Intercept=False
 Tracker Mouse=True
 Tracker Cursor=True
 Tracker Cursor BranchInfo=False
-Horizontal Cursor=False
+Horizontal Cursor=True
 Same Y Scales=Yes
 Enable X Scaling=True
 Enable Y Scaling=True
@@ -1085,6 +1058,13 @@ FFT_IncludeDCHarmonic=False
 FFT_AutoScale_Harmonics="10"
 PrinterAutoTile=No
 PrinterBlackBorder=No
+MonMaxShow=3
+MonPageWidth=66
+MonPlotWidth=21
+MonExprXWidth=142
+MonExprYWidth=306
+MonRangeXWidth=90
+MonRangeYWidth=90
 AnimateWait=None
 AnimateWaitTime=500
 AnimatePressAfter=0
@@ -1111,8 +1091,11 @@ Num Out Allow Dup Y Expr=False
 Num Out Low="TSTART"
 Num Out High="TMAX"
 Num Out Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Num Out Window Placement=0,1, -1,-1, -1,-1, 0,0,1907,834
 Num Out Format=3
 Num Out HideNonSelected=False
+Wav SampleRate=11025
+Wav Nbits=16
 AutoSaveWave=False
 Wave Format=16E
 State Variables Format=5E
@@ -1222,6 +1205,10 @@ ALIGNRIGHT=Yes
 ALIGNTOP=Yes
 ALIGNBOTTOM=Yes
 
+[APage]
+Analysis=Transient
+Name="Main"
+
 [Monte Carlo Options]
 Analysis=Transient
 Status=Off
@@ -1233,7 +1220,7 @@ Seed=0
 
 [Limits]
 Analysis=Transient
-TRange=3000u
+TRange=70m
 TStep=0
 NPts=51
 Temp=27
@@ -1250,9 +1237,11 @@ Plt=1
 AliasID=1
 XExp=T
 YExp=v(1)
-XRng=Auto
-YRng=Auto
+XRng=0.003
+YRng=24,-6
 Options=LINEARX,LINEARY
+Range Grid X=0.0006
+Range Grid Y=6
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -1274,9 +1263,11 @@ Plt=1
 AliasID=2
 XExp=T
 YExp=v(2)
-XRng=Auto
-YRng=Auto
+XRng=0.003
+YRng=24,-6
 Options=LINEARX,LINEARY
+Range Grid X=0.0006
+Range Grid Y=6
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -1323,6 +1314,7 @@ PlaceText=True
 
 [Pane]
 Analysis=Transient
+CurrentPage 0="Main"
 
 [Pane]
 Analysis=AC
