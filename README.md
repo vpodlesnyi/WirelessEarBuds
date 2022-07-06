@@ -1,2 +1,2 @@
-# WirelessHeadphone
-Устройство беспроводной передачи данных на микронаушник
+# WirelessEarBuds
+Device for wireless sound transmission to a micro-earbuds.
