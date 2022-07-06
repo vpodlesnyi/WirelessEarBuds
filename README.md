@@ -1,2 +1,2 @@
 # WirelessEarBuds
-Device for wireless sound transmission to a micro-earbuds.
+Device for wireless sound transmission to micro-earbuds.
